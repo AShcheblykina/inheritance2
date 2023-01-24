@@ -1,7 +1,8 @@
-public class ProductRepository {
-    private static Product[] products = new Product[0];
+public class Repository {
 
-    public static void add(Product product) {
+    private Product[] products = new Product[0];
+
+    public void add(Product product) {
         Product[] tmp = new Product[products.length + 1];
         for (int i = 0; i < products.length; i++) {
             tmp[i] = products[i];
@@ -10,7 +11,7 @@ public class ProductRepository {
         products = tmp;
     }
 
-    public static Product[] findAll() {
+    public Product[] findAll() {
 
         return products;
     }
@@ -26,12 +27,5 @@ public class ProductRepository {
         }
         products = tmp;
         return tmp;
-    }
-
-    public Product[] searchById() {
-        Product[] result = new Product[0];
-        for (Product product : ProductRepository.findAll()) ;
-
-        return result;
     }
 }

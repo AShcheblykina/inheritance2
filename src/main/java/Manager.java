@@ -1,21 +1,19 @@
-public class ProductManager {
-    private static ProductRepository  ProductRepository;
+public class Manager {
+    private static Repository repository;
 
-    public ProductManager(ProductRepository  ProductRepository) {
-        this.ProductRepository =  ProductRepository;
+    public Manager(Repository repository) {
+        this.repository = repository;
     }
 
     public static void add(Product product) {
-        ProductRepository.add(product);
+        repository.add(product);
     }
 
-    public static void removeById(Book book3) {
-    }
 
 
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
-        for (Product product:  ProductRepository.findAll()) {
+        for (Product product: repository.findAll()) {
             if(matches(product, text)){
                 Product[] tmp = new Product[result.length + 1];
                 for (int i = 0; i < result.length; i++) {
