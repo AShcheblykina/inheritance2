@@ -38,7 +38,7 @@ class RepositoryTest {
         manager.add(book3);
 
         Product[] expected = {book1, book3};
-        Product[] actual = repo.removeById(2);
+        Product[] actual = repo.deletyById(2);
 
         Assertions.assertArrayEquals(expected,actual);
     }
