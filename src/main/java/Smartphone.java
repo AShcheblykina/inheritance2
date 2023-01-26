@@ -1,13 +1,13 @@
 
 public class Smartphone extends Product {
-    private String vendor;
+    private String manufacturer;
 
     public Smartphone(int id, String name, int price, String vendor) {
         super(id, name, price);
-        this.vendor = vendor;
+        this.manufacturer = vendor;
     }
 
     public String getVendor() {
-        return vendor;
+        return manufacturer;
     }
 }

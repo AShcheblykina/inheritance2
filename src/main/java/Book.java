@@ -9,15 +9,7 @@ public class Book extends Product {
 
     public String getAuthor() {
         return author;
-    }
 
-    @Override
-    public boolean isTooExpensive() {
-        if (price > 10_000) {
-            return true;
-        } else {
-            return  false;
-        }
     }
 
     public void setPrice(int i) {

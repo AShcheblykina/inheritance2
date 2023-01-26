@@ -22,11 +22,6 @@ public class Product {
     public int getPrice() {
         return price;
     }
-    public boolean isTooExpensive() {
-        if (price > 1_000_000) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 }
+

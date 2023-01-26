@@ -1,17 +1,16 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class RepositoryTest {
     @Test
     public void testAdd() {
         Repository repo = new Repository();
         Manager manager = new Manager(repo);
 
-        Book book1 = new Book(1, "Faust", 1300, "Goethe");
-        Book book2 = new Book(2, "War and Peace", 2000, "Tolstoy");
-        Book book3 = new Book(3, "Harry Potter", 1000, "Rowling");
+        Book book1 = new Book(1, "The birth of tragedy", 100, "Nietzsche");
+        Book book2 = new Book(2, "On the other side of good and evil", 400, "Nietzsche");
+        Book book3 = new Book(3, "Thus spoke Zarathustra", 600, "Nietzsche");
+
 
         manager.add(book1);
         manager.add(book2);
@@ -28,10 +27,10 @@ class RepositoryTest {
         Repository repo = new Repository();
         Manager manager = new Manager(repo);
 
+        Book book1 = new Book(1, "The birth of tragedy", 100, "Nietzsche");
+        Book book2 = new Book(2, "On the other side of good and evil", 400, "Nietzsche");
+        Book book3 = new Book(3, "Thus spoke Zarathustra", 600, "Nietzsche");
 
-        Book book1 = new Book(1, "Faust", 1300, "Goethe");
-        Book book2 = new Book(2, "War and Peace", 2000, "Tolstoy");
-        Book book3 = new Book(3, "Harry Potter", 1000, "Rowling");
 
         manager.add(book1);
         manager.add(book2);
@@ -40,6 +39,6 @@ class RepositoryTest {
         Product[] expected = {book1, book3};
         Product[] actual = repo.deletyById(2);
 
-        Assertions.assertArrayEquals(expected,actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 }

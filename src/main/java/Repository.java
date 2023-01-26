@@ -16,11 +16,11 @@ public class Repository {
         return products;
     }
 
-    public Product[] removeById(int removeId) {
+    public Product[] deletyById(int deleteId) {
         Product[] tmp = new Product[products.length - 1];
         int index = 0;
         for (Product product : products) {
-            if (product.getId() != removeId) {
+            if (product.getId() != deleteId) {
                 tmp[index] = product;
                 index++;
             }
